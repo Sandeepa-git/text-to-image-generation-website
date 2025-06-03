@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Image Generator</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-theme">
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <h1>AI Image Generator</h1>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <form action="#" class="prompt-form">
+        <div class="prompt-input-wrapper">
+          <textarea
+            class="prompt-input"
+            placeholder="Describe your imagination in detail..."
+            required
+            autofocus
+          ></textarea>
+          <button type="button" class="prompt-button" title="Random prompt">
+            <i class="fa-solid fa-dice"></i>
+          </button>
+        </div>
+
+        <!-- Prompt Actions -->
+        <div class="prompt-actions">
+          <div class="select-wrapper">
+            <select class="custom-select" required>
+              <option value="">Select Model</option>
+              <option value="model1">FLUX.1 -dev</option>
+              <option value="model2">FLUX.1-schnell</option>
+            </select>
+          </div>
+          <div class="select-wrapper">
+            <select class="custom-select" required>
+              <option value="">Image Count</option>
+              <option value="1">1 Image</option>
+              <option value="2">2 Images</option>
+              <option value="3">3 Images</option>
+              <option value="4">4 Images</option>
+              <option value="5">5 Images</option>
+            </select>
+          </div>
+          <div class="select-wrapper">
+            <select class="custom-select" required>
+              <option value="">Aspect Ratio</option>
+              <option value="1/1">Square (1:1)</option>
+            </select>
+          </div>
+          <button type="submit" class="generate-btn">
+            <i class="fa-solid fa-wand-sparkles"></i> Generate
+          </button>
+        </div>
+      </form>
+
+      <!-- Result Gallery Grid -->
+      <div id="gallery-grid" style="display:none;"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
